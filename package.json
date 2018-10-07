@@ -21,7 +21,7 @@
     "semantic-release": "semantic-release",
     "start": "npm-run-all clean copy babel:watch",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "travis-deploy-once": "travis-deploy-once"
+    "travis-deploy-once": "travis-deploy-once --pro"
   },
   "husky": {
     "hooks": {
