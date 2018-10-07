@@ -117,7 +117,7 @@ export default class BootstrapApp extends Generator {
                 this.props.project.workflow = 'gulp-elixir';
                 break;
               case 3:
-                this.props.project.workflow = 'parcel';
+                this.props.project.workflow = 'laravel-mix';
                 break;
             }
           });
@@ -149,9 +149,10 @@ export default class BootstrapApp extends Generator {
       files() {
         const done = this.async();
         const dest = this.props.project.dir;
+        const branch = this.props.project.workflow;
 
         // eslint-disable-next-line no-new
-        new Remote('workflow', 'gulp-elixir', (err, cache) => {
+        new Remote('workflow', branch, (err, cache) => {
           this.cache = cache;
 
           // Copy folders
