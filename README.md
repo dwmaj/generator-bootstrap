@@ -13,7 +13,7 @@
 ## Prerequisites
 
 - Node (of course)
-- Yeoman : `npm i -g yeoman`
+- Yeoman : `npm i -g yo`
 
 ## Installation
 
