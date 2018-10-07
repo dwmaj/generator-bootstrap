@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/dwmaj/generator-bootstrap/compare/v2.1.1...v2.1.2) (2018-10-07)
+
+
+### Bug Fixes
+
+* **doc:** :memo: add `npx` command ([d1a420e](https://github.com/dwmaj/generator-bootstrap/commit/d1a420e))
+
 ## [2.1.1](https://github.com/dwmaj/generator-bootstrap/compare/v2.1.0...v2.1.1) (2018-10-07)
 
 
