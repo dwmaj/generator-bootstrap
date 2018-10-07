@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/dwmaj/generator-bootstrap/compare/v2.0.0...v2.1.0) (2018-10-07)
+
+
+### Features
+
+* **workflow:** :sparkles: support laravel-mix branch for B3G ([b2232b7](https://github.com/dwmaj/generator-bootstrap/commit/b2232b7))
+
 # [2.0.0](https://github.com/dwmaj/generator-bootstrap/compare/v1.0.2...v2.0.0) (2018-10-07)
 
 
