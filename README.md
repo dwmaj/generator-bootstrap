@@ -19,6 +19,10 @@
 
 `npm i -g @dwmaj/generator-bootstrap`
 
+## All-in-one (via `npx`, it can take several minutes…)
+
+`npx -p yo -p @dwmaj/generator-bootstrap -c 'yo @dwmaj/bootstrap'`
+
 ## Usage
 
 ```bash
