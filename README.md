@@ -19,16 +19,28 @@
 
 `npm i -g @dwmaj/generator-bootstrap`
 
-## All-in-one (via `npx`, it can take several minutes…)
-
-`npx -p yo -p @dwmaj/generator-bootstrap -c 'yo @dwmaj/bootstrap'`
-
 ## Usage
 
 ```bash
 cd ~/projects
 yo @dwmaj/bootstrap
 ```
+
+---
+
+## Emergency (via `npx`)
+
+> You can not install globally. It can take several minutes… ⏳
+
+`npx -p yo -p @dwmaj/generator-bootstrap -c 'yo @dwmaj/bootstrap'`
+
+---
+
+## Want to contribute?
+
+[check this](./CONTRIBUTING.md)
+
+---
 
 ## License
 
