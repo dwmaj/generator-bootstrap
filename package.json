@@ -2,6 +2,9 @@
   "name": "@dwmaj/generator-bootstrap",
   "version": "0.0.0-development",
   "description": "A DWMAJ generator to easily start a project",
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://github.com/dwmaj/generator-bootstrap#readme",
   "files": [
     "generators"
