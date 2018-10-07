@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/dwmaj/generator-bootstrap/compare/v2.1.2...v2.1.3) (2018-10-07)
+
+
+### Bug Fixes
+
+* **doc:** :pencil2: YO! (not yeoman) ([6f76f3b](https://github.com/dwmaj/generator-bootstrap/commit/6f76f3b))
+
 ## [2.1.2](https://github.com/dwmaj/generator-bootstrap/compare/v2.1.1...v2.1.2) (2018-10-07)
 
 
