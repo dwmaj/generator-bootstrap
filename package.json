@@ -87,7 +87,7 @@
     "@semantic-release/npm": "^5.0.4",
     "babel-eslint": "^10.0.1",
     "commitizen": "^3.0.2",
-    "cz-ccgls": "^0.1.1",
+    "cz-ccgls": "^0.2.0",
     "eslint": "^5.6.1",
     "husky": "^1.1.1",
     "jest": "^23.6.0",
