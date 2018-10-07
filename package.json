@@ -18,6 +18,7 @@
     "clean": "rimraf generators",
     "copy": "cp -r src/. generators/",
     "lint": "eslint src/**/*.js",
+    "prepublishOnly": "npm-run-all clean test build",
     "semantic-release": "semantic-release",
     "start": "npm-run-all clean copy babel:watch",
     "test": "echo \"Error: no test specified\" && exit 0",
