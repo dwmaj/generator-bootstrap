@@ -88,8 +88,6 @@ export default class BootstrapApp extends Generator {
           .then(answers => {
             this.props.project.name = answers.projectName;
             this.props.project.dir = kebabcase(answers.projectName);
-            console.info('NAME', this.props.project.name);
-            console.info('DIR', this.props.project.dir);
           });
       },
 
@@ -122,8 +120,6 @@ export default class BootstrapApp extends Generator {
                 this.props.project.workflow = 'parcel';
                 break;
             }
-            console.info('YEAR', answers.schoolYear);
-            console.info('WORKFLOW', this.props.project.workflow);
           });
       },
     };
@@ -154,10 +150,8 @@ export default class BootstrapApp extends Generator {
         const done = this.async();
         const dest = this.props.project.dir;
 
-        // DEV
-        // new Remote('workflow', 'master', (err, cache) => {
         // eslint-disable-next-line no-new
-        new Remote('dwm-gulp-elixir', 'master', (err, cache) => {
+        new Remote('workflow', 'gulp-elixir', (err, cache) => {
           this.cache = cache;
 
           // Copy folders
