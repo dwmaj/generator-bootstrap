@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/dwmaj/generator-bootstrap/compare/v2.1.0...v2.1.1) (2018-10-07)
+
+
+### Bug Fixes
+
+* **doc:** :memo: add prerequisites and installation steps ([46de81e](https://github.com/dwmaj/generator-bootstrap/commit/46de81e))
+
 # [2.1.0](https://github.com/dwmaj/generator-bootstrap/compare/v2.0.0...v2.1.0) (2018-10-07)
 
 
