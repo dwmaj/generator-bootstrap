@@ -26,6 +26,11 @@ cd ~/projects
 yo @dwmaj/bootstrap
 ```
 
+Then, answer to the few questions and follow the instructions.
+
+> If you have an env variable `DWMAJ_GH_TOKEN` with a [personal token](https://github.com/settings/tokens),
+> the generator will be able to create your repo and initialize git. Just accept…
+
 ---
 
 ## Emergency (via `npx`)
