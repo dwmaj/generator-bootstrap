@@ -1,3 +1,10 @@
+# [2.2.0](https://github.com/dwmaj/generator-bootstrap/compare/v2.1.3...v2.2.0) (2018-10-09)
+
+
+### Features
+
+* :sparkles: add repo creation and git initialization ([328a649](https://github.com/dwmaj/generator-bootstrap/commit/328a649))
+
 ## [2.1.3](https://github.com/dwmaj/generator-bootstrap/compare/v2.1.2...v2.1.3) (2018-10-07)
 
 
