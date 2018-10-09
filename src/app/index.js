@@ -1,9 +1,10 @@
-/* eslint-disable class-methods-use-this */
+/* eslint-disable class-methods-use-this, consistent-return */
 const chalk = require('chalk');
 const del = require('del');
 const fs = require('fs');
 const path = require('path');
 
+import axios from 'axios';
 import Generator from 'yeoman-generator';
 import kebabcase from 'lodash/kebabcase';
 import Remote from '../_utils/Remote';
@@ -122,6 +123,25 @@ export default class BootstrapApp extends Generator {
             }
           });
       },
+
+      askForRepo() {
+        if (process.env.DWMAJ_GH_TOKEN) {
+          const prompts = [
+            {
+              name: 'createRepo',
+              type: 'confirm',
+              message: 'Create a repo on Github?',
+              default: false,
+            },
+          ];
+
+          return this
+            .prompt(prompts)
+            .then(answers => {
+              this.props.createRepo = answers.createRepo;
+            });
+        }
+      },
     };
   }
 
@@ -129,16 +149,16 @@ export default class BootstrapApp extends Generator {
     return {
       dir() {
         // Create project directory
-        const folder = this.props.project.dir;
+        const dest = this.props.project.dir;
 
-        if (fs.existsSync(folder)) {
+        if (fs.existsSync(dest)) {
           this.env.error(`
-> ${chalk.red(`Ooops! Non-empty directory! [${process.cwd()}/${folder}]`)}
+> ${chalk.red(`Ooops! Non-empty directory! [${process.cwd()}/${dest}]`)}
 > ${chalk.red('I don\'t want to erase your stuff… 😅')}
 > ${chalk.red('Retry with another name/location')}
           `);
         } else {
-          fs.mkdirSync(this.props.project.name);
+          fs.mkdirSync(dest);
         }
       },
     };
@@ -163,6 +183,69 @@ export default class BootstrapApp extends Generator {
 
           done();
         });
+      },
+
+      repo() {
+        if (this.props.createRepo) {
+          const done = this.async();
+          const name = this.props.project.dir;
+          const description = this.props.project.name;
+          const dest = name;
+
+          axios({
+            method: 'post',
+            url: 'https://api.github.com/user/repos',
+            headers: {
+              Accept: 'application/vnd.github.v3+json',
+              Authorization: `token ${process.env.DWMAJ_GH_TOKEN}`,
+            },
+            data: {
+              name,
+              description,
+              private: false,
+            },
+          })
+            .then(res => {
+              if (res.status === 201) {
+                this.log(`> ${chalk.cyan('🐙 Creating repo')}`);
+
+                return res.data.ssh_url;
+              }
+            })
+            .catch(err => {
+              let msg;
+
+              if (err.response) {
+                // The request was made and the server responded with a status code
+                // that falls out of the range of 2xx
+                msg = err.response.status;
+              } else if (err.request) {
+                // The request was made but no response was received
+                // `error.request` is an instance of XMLHttpRequest in the browser and an instance of
+                // http.ClientRequest in node.js
+                msg = err.request;
+              } else {
+                // Something happened in setting up the request that triggered an Error
+                msg = err.message;
+              }
+              this.log(`> ${chalk.red(`🐙 An error append during repo creation [${msg}]`)}`);
+              done();
+            })
+            .then(url => {
+              this.log(`> ${chalk.cyan(`⚡️ Initializing git [${url}]`)}`);
+              // eslint-disable-next-line global-require
+              const simpleGit = require('simple-git/promise')(path.join(process.cwd(), dest));
+
+              return simpleGit
+                .init()
+                .then(() => simpleGit.addRemote('origin', url))
+                .then(done)
+                .catch(err => {
+                  this.log(`> ${chalk.red(`🐙 An error append during git initialization [${err.message}]`)}`);
+                  done();
+                });
+            });
+        }
       },
     };
   }
