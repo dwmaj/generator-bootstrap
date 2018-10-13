@@ -1,3 +1,10 @@
+## [2.2.2](https://github.com/dwmaj/generator-bootstrap/compare/v2.2.1...v2.2.2) (2018-10-13)
+
+
+### Bug Fixes
+
+* :heavy_minus_sign: switch lodash… ([d146861](https://github.com/dwmaj/generator-bootstrap/commit/d146861))
+
 ## [2.2.1](https://github.com/dwmaj/generator-bootstrap/compare/v2.2.0...v2.2.1) (2018-10-13)
 
 
