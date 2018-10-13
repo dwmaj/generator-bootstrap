@@ -1,3 +1,10 @@
+## [2.2.1](https://github.com/dwmaj/generator-bootstrap/compare/v2.2.0...v2.2.1) (2018-10-13)
+
+
+### Bug Fixes
+
+* :heavy_plus_sign: add missing lodash ([f2f1d41](https://github.com/dwmaj/generator-bootstrap/commit/f2f1d41))
+
 # [2.2.0](https://github.com/dwmaj/generator-bootstrap/compare/v2.1.3...v2.2.0) (2018-10-09)
 
 
