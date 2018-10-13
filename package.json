@@ -75,6 +75,7 @@
     "chalk": "^2.4.1",
     "del": "^3.0.0",
     "download": "^7.1.0",
+    "lodash": "^4.17.11",
     "simple-git": "^1.104.0",
     "unique-string": "^1.0.0",
     "xdg-basedir": "^3.0.0",
