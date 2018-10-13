@@ -6,7 +6,7 @@ const path = require('path');
 
 import axios from 'axios';
 import Generator from 'yeoman-generator';
-import kebabcase from 'lodash/kebabcase';
+import kebabcase from 'dashify';
 import Remote from '../_utils/Remote';
 
 /**
