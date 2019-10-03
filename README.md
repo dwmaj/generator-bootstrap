@@ -22,7 +22,7 @@
 ## Usage
 
 ```bash
-cd ~/projects
+cd ~/heaj
 yo @dwmaj/bootstrap
 ```
 
