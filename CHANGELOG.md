@@ -1,3 +1,10 @@
+## [2.2.3](https://github.com/dwmaj/generator-bootstrap/compare/v2.2.2...v2.2.3) (2020-01-11)
+
+
+### Bug Fixes
+
+* 🐛 Update B2G branch name ([1da07e8](https://github.com/dwmaj/generator-bootstrap/commit/1da07e8))
+
 ## [2.2.2](https://github.com/dwmaj/generator-bootstrap/compare/v2.2.1...v2.2.2) (2018-10-13)
 
 
