@@ -115,7 +115,7 @@ export default class BootstrapApp extends Generator {
             switch (answers.schoolYear) {
               case 2:
               default:
-                this.props.project.workflow = 'gulp-elixir';
+                this.props.project.workflow = 'laravel-mix-minimal';
                 break;
               case 3:
                 this.props.project.workflow = 'laravel-mix';
