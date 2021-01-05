@@ -71,7 +71,7 @@
     "url": "https://github.com/dwmaj/generator-bootstrap/issues"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "chalk": "^2.4.1",
     "dashify": "^1.0.0",
     "del": "^3.0.0",
